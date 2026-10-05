@@ -8,6 +8,8 @@
 
 [Basic course information in USOS](https://usosweb.uw.edu.pl/kontroler.php?_action=katalog2%2Fprzedmioty%2FpokazPrzedmiot&kod=1000-2M12KI1&lang=en)
 
+## Slides
+[folder](https://github.com/sdziembowski/cryptography-I-2026/tree/main/Slides)
 
 ## Lectures
 
