@@ -13,6 +13,8 @@
 
 - **Lecture 1**,
 *Oct 5, 2026*:
+Chapter 1, slides 1-59
+
 
 ## Exercises
 
