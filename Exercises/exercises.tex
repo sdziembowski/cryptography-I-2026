@@ -54,7 +54,7 @@ Let $\Pi$ be the set of all probability distributions over a finite nonempty set
 		\item \emph{triangle inequality:} for every $\alpha,\beta,\gamma \in \Pi$ we have that $\SD{\alpha}{\gamma} \leq \SD{\alpha}{\beta} + \SD{\beta}{\gamma}$.
 	\end{itemize}
 
-\subsection{Statistical distance as distinguishing advantage}
+\subsection{Statistical distance as distinguishing advantage}\label{ex:distinguishing}
 Let $A$ and $B$ be two random variables taking values from some finite set $\cX$. For a (possibly randomized) machine $\cD$ that takes inputs from $\cX$ and outputs a bit, define its \emph{distinguishing advantage} between $A$ and $B$ as
 \[
     \advntg^{\mathrm{dist}}_{\cD}(A,B) := \abs{\prob{\cD(A) = 1} - \prob{\cD(B) = 1}}.
@@ -89,7 +89,7 @@ For every $\alpha_0$ and $\alpha_1$, construct $\cM$ that achieves equality in E
     \max_{\cM}\advntg^{\mathrm{guess}}_{\cM} = \half\SD{\alpha_0}{\alpha_1}.
 \]
 
-\subsection{How function application changes statistical distance}
+\subsection{How function application changes statistical distance}\label{ex:function-application}
 Let $A$ and $B$ take values in a finite nonempty set $\cX$, and let $\cY$ be a finite nonempty set. Show that for every function $f: \cX \rightarrow \cY$ we have
 \[
 \SD{f(A)}{f(B)} \leq \SD{A}{B}.

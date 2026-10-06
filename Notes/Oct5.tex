@@ -1,0 +1,53 @@
+\documentclass{llncs}
+\usepackage[utf8]{inputenc}
+
+% xr-hyper must be loaded before hyperref (which macros.tex loads)
+\usepackage{xr-hyper}
+\input{../Exercises/macros}
+% References to the exercises; compile ../Exercises/exercises.tex first
+\externaldocument[ex-]{../Exercises/exercises}
+
+\title{Cryptography I: Lecture Notes}
+\subtitle{October 5, 2026}
+\author{Stefan Dziembowski and ChatGPT}
+\institute{University of Warsaw}
+
+\begin{document}
+
+\maketitle
+
+\section{Applying a function to a random variable}
+
+When describing a probabilistic computation, we often apply a deterministic
+function $f: \cX \rightarrow \cY$ to a random input $X$. Operationally, in
+each run we take the value $x$ of $X$ and compute $f(x)$. Since the result
+depends on $X$, it is itself a random variable, which we denote by $f(X)$.
+To connect this notation with the formal definition of random variables, recall that a random
+variable is a function $X: \Omega \rightarrow \cX$, where $\Omega$ is the
+sample space. Each outcome $\omega \in \Omega$ determines an input value
+$X(\omega)$, and hence an output value $f(X(\omega))$. Thus, $f(X)$ is the
+\emph{composition}
+\[
+    f(X) := f \circ X: \Omega \rightarrow \cY,
+    \qquad
+    \omega \mapsto f\bigl(X(\omega)\bigr).
+\]
+In other words, $f(X)$ is shorthand for applying $f$ to the value of $X$ at
+each outcome.
+Note that $X$ and $f(X)$ share the same underlying randomness: computing
+$f(X)$ involves no new random choices.\footnote{On general measurable spaces,
+$f(X)$ is a random variable whenever $f$ is measurable.}
+
+This notation appears, for example, in \ref{ex-ex:function-application}
+(\emph{How function application changes statistical distance}), which asks
+us to show that
+\[
+    \SD{f(A)}{f(B)} \leq \SD{A}{B}.
+\]
+Here, $f(A)$ and $f(B)$ are obtained by applying the same function $f$ to the
+values of $A$ and $B$, respectively, so the inequality compares how
+distinguishable the two distributions are before and after this
+transformation. Intuitively, applying $f$ can only lose information: $f$ may
+merge distinct inputs into a single output, which can never make the
+distributions easier to tell apart. 
+\end{document}
