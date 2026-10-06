@@ -1,0 +1,162 @@
+
+%% Save the class definition of \subparagraph
+\let\llncssubparagraph\subparagraph
+%% Provide a definition to \subparagraph to keep titlesec happy
+\let\subparagraph\paragraph
+%% Load titlesec
+\usepackage[compact]{titlesec}
+%% Revert \subparagraph to the llncs definition
+\let\subparagraph\llncssubparagraph
+% Add QED symbol at the end of proofs
+\let\proof\relax\let\endproof\relax
+\usepackage{amsthm}
+
+%\titleclass{\ex}{straight}[\section]
+%\newcounter{ex}
+
+\usepackage{enumitem}
+
+\usepackage[
+n,
+operators,
+advantage,
+sets,
+adversary,
+landau,
+probability,
+notions,
+logic,
+ff,
+mm,
+primitives,
+events,
+complexity,
+asymptotics,
+keys,oracles]{cryptocode}
+
+\newenvironment{sol}{\par\noindent\rule{\textwidth}{0.4pt}
+\paragraph{Solution:}}{\par\noindent\rule{\textwidth}{0.4pt}
+}
+
+
+\usepackage{wrapfig}
+\usepackage{framed}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{zref-clever}
+\newcommand{\cref}[1]{\zcref{#1}}
+
+\newcommand{\half}{{\textstyle\frac{1}{2}}}
+
+\newcommand{\SD}[2]{\Delta(#1 \: ;  #2)}
+
+\newcommand{\cA}{{\mathcal A}}
+\newcommand{\cO}{{\mathcal O}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cQ}{{\mathcal Q}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cX}{{\mathcal X}}
+\newcommand{\cY}{{\mathcal Y}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cI}{{\mathcal I}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cW}{{\mathcal W}}
+\newcommand{\sP}{{\mathsf{P}}}
+\newcommand{\sQ}{{\mathsf{Q}}}
+\newcommand{\sA}{{\mathsf{A}}}
+\newcommand{\sB}{{\mathsf{B}}}
+\newcommand{\sC}{{\mathsf{C}}}
+\newcommand{\sD}{{\mathsf{D}}}
+
+
+\usepackage{fullpage}
+
+
+%\titleformat{\ex}{\normalsize\bfseries}{}{0em}{Exercise \theex:~}
+%\titlespacing*{\ex}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\renewcommand{\thesubsection}{Exercise \arabic{section}.\arabic{subsection}}
+\zcRefTypeSetup{subsection}{
+	Name-sg = Exercise ,
+	name-sg = exercise ,
+	Name-pl = Exercises ,
+	name-pl = exercises ,
+}
+\renewcommand{\verify}{\mathsf{Verify}}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\newcommand{\DES}{{\mathsf{DES}}}
+\newcommand{\negate}[1]{\overline{#1}}
+\newcommand{\polyn}{\mathsf{poly}}
+\newcommand{\Tag}{\mathsf{Tag}}
+\newcommand{\advntg}{\mathsf{Adv}}
+\newcommand{\wins}{\mathsf{wins}}
+
+\newcommand{\PRNG}{\mathsf{PRNG}}
+
+\newcommand{\suffix}{\mathsf{suffix}}
+\newcommand{\CRT}{\mathsf{CRT}}
+\newcommand{\puzzle}{\mathsf{puzzle}}
+\newcommand{\setup}{\mathsf{Setup}}
+\newcommand{\commit}{\mathsf{Commit}}
+\newcommand{\open}{\mathsf{Open}}
+
+\newcommand{\acc}{\mathsf{accept}}
+\newcommand{\rej}{\mathsf{reject}}
+
+%\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\bins}{\bin^*}
+\newcommand{\conc}{\: || \:}
+\renewcommand{\pp}{\mathsf{pp}}
+\usepackage{mdframed}
+
+\mdfdefinestyle{protstyle}{%
+        % userdefinedwidth=.5\linewidth,
+        align=center,
+	linecolor=black,linewidth=1.5pt,%
+	frametitlerule=true,%
+	frametitlebackgroundcolor=gray!20,
+	innertopmargin=\topskip,
+        skipabove=12pt,
+}
+
+\newenvironment{prot}[1]{\begin{mdframed}[style=protstyle,frametitle={#1}]}{\end{mdframed}\vspace{.3cm}}
+\newcommand{\Exp}{\mathsf{Exp}}
+\newcommand{\SSadv}{\mathsf{SSadv}}
+\newcommand{\ct}{\mathsf{ct}}
+\newcommand{\encap}{\mathsf{Encaps}}
+\newcommand{\decap}{\mathsf{Decaps}}
+\newcommand{\partdec}{\mathsf{partdec}}
+\newcommand{\findec}{\mathsf{findec}}
+
+\providecommand{\ifhideproofs}{\iffalse}
+\ifhideproofs
+\usepackage{environ}
+\NewEnviron{hide}{}
+\let\proof\hide
+\let\endproof\endhide
+\fi
+
+\newcommand{\VRF}{\mathsf{VRF}}
+\newcommand{\wuf}{\mathsf{WUF}}
+\newcommand{\euf}{\mathsf{EUF}}
+\newcommand{\qsdh}{\mathsf{qSDH}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\com}{\mathsf{com}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}

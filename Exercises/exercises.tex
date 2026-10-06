@@ -1,0 +1,135 @@
+\documentclass{llncs}
+\usepackage[utf8]{inputenc}
+
+\input{macros}
+
+
+\title{Cryptography Exercises}
+\subtitle{\textcolor{red}{under construction\\ do not disitribute\\   \scriptsize{\emph{last change \today}}}}
+\author{Stefan Dziembowski}
+\date{\today}
+
+
+\institute{University of Warsaw}
+
+\begin{document}
+
+\maketitle
+
+
+
+
+\section{Statistical distance and information-theoretic encryption}
+
+Let $A$ and $B$ be two random variables taking values in a finite nonempty set $\cX$. Define the \emph{statistical distance\footnote{This is also known as the \emph{total variation distance}, especially in the quantum information literature} between $A$ and $B$} as
+\[
+\SD{A}{B} := \half \cdot \sum_{a \in \cX} \abs{\prob{A=a} - \prob{B=a}},
+\]
+and \emph{statistical distance of $A$ from uniformity} as
+\[
+d(A) := \SD{A}{U_\cX},
+\]
+where $U_\cX$ is uniform over $\cX$. The reference uniform distribution is always on the declared set; for a tuple, it is on the Cartesian product of the declared sets for its coordinates. Analogously, $\Delta$ can be defined as a distance between two \emph{probability distributions $\alpha,\beta:\cX \rightarrow [0,1]$} as
+\[
+\SD{\alpha}{\beta} := \SD{A}{B},
+\]
+where $A$ and $B$ are random variables (taking values from $\cX$) distributed according to $\alpha$ and $\beta$ (respectively). A similar convention applies to the distance $d$ from uniformity.
+
+Randomized machines use private randomness independent of all external random choices.
+
+
+
+\subsection{An alternative definition of statistical distance}
+Show that for every $A$ and $B$ we have
+\[
+\SD{A}{B} = \sum_{a \in \cX:\, \prob{A=a} > \prob{B=a}} \left(\prob{A=a} - \prob{B=a}\right).
+\]
+
+\subsection{Statistical distance as a metric}
+Let $\Pi$ be the set of all probability distributions over a finite nonempty set $\cX$. Prove that $\Delta$ is a \emph{metric} on this set, i.e., it satisfies the following axioms:
+	\begin{itemize}
+		\item \emph{non-negativity:} for every $\alpha,\beta \in \Pi$ we have $\SD{\alpha}{\beta} \geq 0$,
+		\item \emph{identity of indiscernibles:} for every $\alpha,\beta \in \Pi$ we have that $\SD{\alpha}{\beta} = 0$ if and only if $\alpha = \beta$,
+		\item \emph{symmetry:} for every $\alpha,\beta \in \Pi$ we have that $\SD{\alpha}{\beta} = \SD{\beta}{\alpha}$, and
+		\item \emph{triangle inequality:} for every $\alpha,\beta,\gamma \in \Pi$ we have that $\SD{\alpha}{\gamma} \leq \SD{\alpha}{\beta} + \SD{\beta}{\gamma}$.
+	\end{itemize}
+
+\subsection{Statistical distance as distinguishing advantage}
+Let $A$ and $B$ be two random variables taking values from some finite set $\cX$. For a (possibly randomized) machine $\cD$ that takes inputs from $\cX$ and outputs a bit, define its \emph{distinguishing advantage} between $A$ and $B$ as
+\[
+    \advntg^{\mathrm{dist}}_{\cD}(A,B) := \abs{\prob{\cD(A) = 1} - \prob{\cD(B) = 1}}.
+\]
+Prove that for every computationally unbounded machine $\cD$ we have
+\begin{equation}\label{eq:AB}
+    \advntg^{\mathrm{dist}}_{\cD}(A,B) \leq \SD{A}{B}.
+\end{equation}
+For every $A$ and $B$, construct $\cD$ that achieves equality in Eq.~(\ref{eq:AB}). Show that the maximum is unchanged if the absolute value is omitted, and hence
+\[
+    \SD{A}{B} = \max_{\cD}\left(\prob{\cD(A) = 1} - \prob{\cD(B) = 1}\right),
+\]
+where the maximum is over all computationally unbounded machines that output a bit.
+
+\subsection{Statistical distance and guessing advantage}\label{ex:game}
+Let $\alpha_0$ and $\alpha_1$ be two distributions over a finite nonempty set $\cX$. Consider the following game played by a computationally unbounded, possibly randomized machine $\cM$ (that knows $\alpha_0$ and $\alpha_1$):
+\begin{enumerate}
+		\item A uniformly random bit $b \leftarrow \bin$ is chosen.
+		\item A value $A$ is sampled according to distribution $\alpha_b$ and sent to $\cM$.
+		\item $\cM$ receives $A$ and produces output $\hat b \in \bin$.
+\end{enumerate}
+We say that $\cM$ \emph{won the game} if $\hat b = b$. Define its \emph{guessing advantage} as
+\[
+    \advntg^{\mathrm{guess}}_{\cM} := \abs{\prob{\cM\mbox{\ wins the game}} - \half}.
+\]
+Show that
+\begin{equation}\label{eq:a}
+	\forall_\cM \prob{\cM\mbox{\ wins the game}} \leq \frac{1 + \SD{\alpha_0}{\alpha_1}}{2}.
+\end{equation}
+For every $\alpha_0$ and $\alpha_1$, construct $\cM$ that achieves equality in Eq.~(\ref{eq:a}). By also considering the machine that complements its output, deduce that
+\[
+    \max_{\cM}\advntg^{\mathrm{guess}}_{\cM} = \half\SD{\alpha_0}{\alpha_1}.
+\]
+
+\subsection{How function application changes statistical distance}
+Let $A$ and $B$ take values in a finite nonempty set $\cX$, and let $\cY$ be a finite nonempty set. Show that for every function $f: \cX \rightarrow \cY$ we have
+\[
+\SD{f(A)}{f(B)} \leq \SD{A}{B}.
+\]
+Show that if $f$ is an injection, then
+\[
+\SD{f(A)}{f(B)} = \SD{A}{B}.
+\]
+Deduce that if $f$ is a bijection from $\cX$ onto $\cY$, then $d(f(A)) = d(A)$.
+
+
+
+
+\subsection{One-time pad with imperfect randomness}
+Let $(\enc,\dec)$ be the one-time pad encryption scheme for messages from $\bin^t$. Suppose a key $K$ is chosen from $\bin^t$ according to some distribution $\alpha$. Consider the following indistinguishability game played between a computationally unbounded adversary $\cA$ and a challenger $\Omega$:
+\begin{enumerate}
+	\item $\cA$ produces two messages $m_0,m_1 \in \bin^t$ and sends them to $\Omega$.
+	\item $\Omega$ selects $b\leftarrow\bin$ uniformly at random, independently samples a fresh key $K$ according to $\alpha$, computes $c = \enc(K,m_b)$, and sends $c$ to $\cA$.
+	\item $\cA$ receives $c$ and produces as output $\hat b \in \bin$.
+\end{enumerate}
+We assume that $\cA$ knows $\alpha$. We say that $\cA$ \emph{won the game} if $\hat b = b$. Show that
+\begin{equation*}
+\forall_\cA \prob{\cA\mbox{\ wins the game}} \leq \half + d(\alpha).
+\end{equation*}
+
+\subsection{Conditional statistical distance}
+Let $A$ and $B$ take values in finite nonempty sets $\cX$ and $\cY$, respectively. For each $b$ with $\prob{B=b}>0$, let $\alpha_b$ be the conditional distribution of $A$ given $B=b$, viewed as a distribution over $\cX$. Define the \emph{statistical distance of $A$ from uniformity conditioned on $B$} as
+\[
+d(A\mid B) := \sum_{b \in \cY:\, \prob{B=b}>0} \prob{B=b} \cdot d(\alpha_b).
+\]
+Show that $d(A\mid B) = \SD{(A,B)}{(U_\cX,B)}$, where $U_\cX$ is uniform over $\cX$ and independent of $B$.
+
+\noindent
+Can you find a game-based interpretation of $d(A\mid B)$ similar to the one in~\ref{ex:game}?
+
+\subsection{Conditioning does not decrease the distance from uniformity}
+Show that for every two random variables $A$ and $B$ taking values in finite nonempty sets, we have $d(A\mid B) \geq d(A)$.
+
+
+
+
+
+\end{document}

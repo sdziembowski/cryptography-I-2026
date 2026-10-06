@@ -2,3 +2,42 @@ Slides/~$chapter01.pptx
 Slides/.DS_Store
 .DS_Store
 .DS_Store
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.loa
+*.lol
+*.fls
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+*.dvi
+*.xdv
+
+# Bibliography, indexes, and glossaries
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.idx
+*.ind
+*.ilg
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+
+# Beamer build files
+*.nav
+*.snm
+*.vrb
