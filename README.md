@@ -4,7 +4,7 @@
 
 **Lecturer:** Stefan Dziembowski
 
-**TA:** Mahesh Rajasree
+**TA:** Mahesh Sreekumar Rajasree
 
 [Basic course information in USOS](https://usosweb.uw.edu.pl/kontroler.php?_action=katalog2%2Fprzedmioty%2FpokazPrzedmiot&kod=1000-2M12KI1&lang=en)
 
@@ -19,6 +19,10 @@ Chapter 1, slides 1-59 (see also [this](https://github.com/sdziembowski/cryptogr
 
 
 ## Exercises
+
+- **Tutorial 1**,
+*Oct 5, 2026*:
+Exercise 1, questions 1.1-1.5 (see also [this](https://github.com/sdziembowski/cryptography-I-2026/Exercises/exercises.pdf)) 
 
 ## Passing rules:
 
