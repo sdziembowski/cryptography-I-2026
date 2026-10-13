@@ -24,6 +24,10 @@ Chapter 1, slides 1-59 (see also [this](https://github.com/sdziembowski/cryptogr
 *Oct 5, 2026 and Oct 6, 2026*:
 Exercise 1, questions 1.1-1.5 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
 
+- **Tutorial 2**,
+*Oct 12, 2026*:
+Exercise 1, questions 1.3 and 1.6-1.8 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
+
 ## Passing rules:
 
 ## Exam
