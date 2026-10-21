@@ -28,6 +28,10 @@ Exercise 1, questions 1.1-1.5 of [this](https://github.com/sdziembowski/cryptogr
 *Oct 12, 2026 and Oct 13, 2026*:
 Exercise 1, questions 1.3 and 1.6-1.8 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
 
+- **Tutorial 3**,
+*Oct 19, 2026 and Oct 20, 2026*:
+Exercise 2, questions 2.1 and 2.2 and Exercise 3, question 3.1-3.3 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
+
 ## Passing rules:
 
 ## Exam
