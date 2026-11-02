@@ -13,9 +13,23 @@
 
 ## Lectures
 
+Lectures take place every Monday.
+
 - **Lecture 1**,
 *Oct 5, 2026*:
 Chapter 1, slides 1-59 (see also [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Notes/Oct5.pdf) note)
+
+- **Lecture 2**,
+*Oct 12, 2026*:
+Chapter 1, slides 60-80; Chapter 2, slides 1-26 (ending with "Example of a (candidate for) a one-way function").
+
+- **Lecture 3**,
+*Oct 19, 2026*:
+Chapter 2, slides 27-77 (ending with "Is there an alternative to the stream ciphers?").
+
+- **Lecture 4**,
+*Oct 26, 2026*:
+Chapter 2, slides 78-143 (ending with "Substitution-permutation networks").
 
 
 ## Exercises
