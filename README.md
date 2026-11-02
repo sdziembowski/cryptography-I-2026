@@ -17,7 +17,7 @@ Lectures take place every Monday.
 
 - **Lecture 1**,
 *Oct 5, 2026*:
-Chapter 1, slides 1-59 (see also [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Notes/Oct5.pdf) note)
+Chapter 1, slides 1-59 (ending with "Terms not to confuse"). See also [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Notes/Oct5.pdf) note.
 
 - **Lecture 2**,
 *Oct 12, 2026*:
