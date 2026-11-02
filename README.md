@@ -31,6 +31,10 @@ Chapter 2, slides 27-77 (ending with "Is there an alternative to the stream ciph
 *Oct 26, 2026*:
 Chapter 2, slides 78-143 (ending with "Substitution-permutation networks").
 
+- **Lecture 5**,
+*Nov 2, 2026*:
+Chapter 2, slides 144-176; Chapter 3, slides 1-38 (ending with "Plan", before "Sponge construction").
+
 
 ## Exercises
 
