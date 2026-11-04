@@ -54,7 +54,7 @@ Exercise 2, questions 2.1 and 2.2 and Exercise 3, question 3.1-3.3 of [this](htt
 *Oct 26, 2026 and Oct 27, 2026*:
 Exercise 3, questions 3.4-3.9 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
 
-- **Tutorial 4**,
+- **Tutorial 5**,
 *Nov 02, 2026 and Nov 03, 2026*:
 Exercise 3, questions 3.10-3.11 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
 
