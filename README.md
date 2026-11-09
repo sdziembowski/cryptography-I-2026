@@ -35,6 +35,10 @@ Chapter 2, slides 78-143 (ending with "Substitution-permutation networks").
 *Nov 2, 2026*:
 Chapter 2, slides 144-176; Chapter 3, slides 1-38 (ending with "Plan", before "Sponge construction").
 
+- **Lecture 6**,
+*Nov 9, 2026*:
+Chapter 3, slides 39-78; Chapter 4, slides 1-18 (ending with "Plan", before "A simple construction from a block cipher").
+
 
 ## Exercises
 
