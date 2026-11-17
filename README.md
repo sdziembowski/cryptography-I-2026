@@ -66,6 +66,11 @@ Exercise 3, questions 3.10-3.11 of [this](https://github.com/sdziembowski/crypto
 *Nov 09, 2026 and Nov 10, 2026*:
 Exercise 3, questions 3.14-3.17 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
 
+
+- **Tutorial 6=7**,
+*Nov 16, 2026 and Nov 17, 2026*:
+Exercise 3, question 3.21 and Exercise 4, question 4.1 of [this](https://github.com/sdziembowski/cryptography-I-2026/blob/main/Exercises/exercises.pdf)
+
 ## Passing rules:
 
 ## Exam
