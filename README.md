@@ -39,6 +39,10 @@ Chapter 2, slides 144-176; Chapter 3, slides 1-38 (ending with "Plan", before "S
 *Nov 9, 2026*:
 Chapter 3, slides 39-78; Chapter 4, slides 1-18 (ending with "Plan", before "A simple construction from a block cipher").
 
+- **Lecture 7**,
+*Nov 16, 2026*:
+Chapter 4, slides 19-58 (completed); Chapter 5, slides 1-53 (entire chapter).
+
 
 ## Exercises
 
